@@ -8,12 +8,13 @@ ping www.baidu.com
 if errorlevel 1 goto Reboot
 if errorlevel 0 goto Continue
 :Continue
+::每30min检查一次
 TIMEOUT /T 1800
 goto Begin:
 :Reboot
 python 10_0_0_55.py logout
 python 10_0_0_55.py login
-echo %date:~0,4%%date:~5,2%%date:~8,2%%time:~0,2%%time:~3,2%%time:~6,2% 断网已重启，等待时间30min...>>log.txt
+echo %date:~0,4%%date:~5,2%%date:~8,2%%time:~0,2%%time:~3,2%%time:~6,2% 断网已重启，等待时间30s...>>log.txt
 ::设置延时等待
 TIMEOUT /T 30
 goto Begin
