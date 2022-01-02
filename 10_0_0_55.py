@@ -253,12 +253,7 @@ class User:
 
 def get_config_path(filename: str) -> List[str]:
     "get config file path"
-    paths = ['/etc/']
-    if os.geteuid():
-        if os.getenv('XDG_CONFIG_HOME'):
-            paths.append(os.getenvb('XDG_CONFIG_HOME'))
-        else:
-            paths.append(os.path.expanduser('~/.config'))
+    paths = ['.']
     return map(lambda path: os.path.join(path, filename), paths)
 
 def read_config():
