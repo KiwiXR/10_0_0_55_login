@@ -10,7 +10,7 @@ python 10_0_0_55.py logout --username 1120xxxxxx --password xxxxxxxxx
 ```
 
 ## 使用配置文件
-配置文件路径: `/etc/bit-user.json`或者`~/.config/bit-user.json`
+配置文件路径: `./bit-user.json`，即与`10_0_0_55.py`在同一个目录下
 ```json
 {
     "username": "1120xxxxxx",
@@ -22,11 +22,11 @@ python 10_0_0_55.py login
 python 10_0_0_55.py logout
 ```
 
-## 使用NetworkManager-dispacher
-将`10_0_0_55.py`复制为`/usr/bin/bit-login`，权限+x
+## 定时检测重连
+运行`reconnect.bat`
 
-将`login-bit.sh`复制到`/etc/NetworkManager/dispatcher.d/`
-
-将配置文件保存在`/etc/bit-user.json`
-
-start并且enable NetworkManager-dispatcher
+## 开机自启
+将`reconnect.bat`的**快捷方式**添加到`启动`文件夹中即可，其路径为：
+```text
+%USERPROFILE%\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\Startup
+```
