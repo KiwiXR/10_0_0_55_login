@@ -1,5 +1,11 @@
 # 10_0_0_55_login
 
+![maintenance-status](https://img.shields.io/badge/maintenance-deprecated-red.svg)
+
+本仓库已被抛弃，请直接使用更新后的上游 https://github.com/BITNP/bitsrun
+
+---
+
 登录 10.0.0.55
 
 ## 使用命令行传入参数
